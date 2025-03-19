@@ -95,24 +95,24 @@
     padding: 20px;
     width: 100%;
     margin-top: 5%;
-    text-align: center;justify-content: space-between;
+    text-align: center;
   }
-  
+
   .donateSection {
     font-size: xx-large;
     text-align: center;
-
     margin-bottom: 2%;
   }
-  
+
   .donateBox {
     margin-bottom: 2%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     font-size: xx-large;
   }
-  
+
   .amount {
     font-size: 28px;
     font-weight: bold;
@@ -122,7 +122,7 @@
     padding: 8px 10px;
     border-radius: 5px;
   }
-  
+
   .donateButton {
     background-color: #ff7f2a;
     color: white;
@@ -131,57 +131,93 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
   .taxInfo {
     font-size: 24px;
     margin-top: 5px;
     margin-bottom: 2%;
   }
-  
+
   .footerContent {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
     padding: 20px;
   }
-  
+
   .quickLinks, .contactInfo, .contactDetail {
     width: 30%;
     text-align: left;
   }
-  
+
   .quickLinks h3, .contactInfo h3, .contactDetail h3 {
     font-size: 18px;
     margin-bottom: 10px;
   }
-  
+
   .quickLinks ul {
     list-style: none;
     padding: 0;
   }
-  
+
   .quickLinks li {
     margin: 5px 0;
   }
-  
+
   .contactDetail p {
     margin: 5px 0;
   }
-  
+
   .socialIcons {
     display: flex;
     gap: 10px;
     justify-content: center;
     margin-top: 10px;
   }
-  
+
   .icon {
     font-size: 20px;
   }
-  
+
   .copyright {
     text-align: center;
     padding: 10px 0;
     background-color: #1a1750;
   }
-  
+
+  @media screen and (max-width: 768px) {
+    .footerContent {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .quickLinks, .contactInfo, .contactDetail {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+    .donateBox {
+      flex-direction: column;
+    }
+    .amount {
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .donateSection {
+      font-size: large;
+    }
+    .donateBox {
+      font-size: large;
+    }
+    .amount {
+      font-size: 20px;
+    }
+    .footerContent {
+      padding: 10px;
+    }
+    .copyright {
+      font-size: 14px;
+    }
+  }
