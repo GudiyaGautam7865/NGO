@@ -1,25 +1,34 @@
-
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import styles from "./Header.module.css";
 
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const Herder = () => {
-  return (<>
-   
+  return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>Charius</div>
-      <ul className={styles.navLinks}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/Gellary">Gellary</Link></li>
-     
-        <li><Link to="/Blog">Blogs</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <button><Link to="/Donates"> Donte in kind</Link></button>
+      
+      {/* Menu Toggle Button */}
+      <div className={styles.menuToggle} onClick={() => setIsOpen(!isOpen)}>
+        ☰
+      </div>
+
+      {/* Navigation Links */}
+      <ul className={`${styles.navLinks} ${isOpen ? styles.active : ""}`}>
+        <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
+        <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
+        <li><Link to="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link></li>
+        <li><Link to="/blog" onClick={() => setIsOpen(false)}>Blogs</Link></li>
+        <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+        <li>
+          <Link to="/donate" onClick={() => setIsOpen(false)}>
+            <button className={styles.donateButton}>Donate in Kind</button>
+          </Link>
+        </li>
       </ul>
     </nav>
-    </>
   );
 };
 
-export default Herder ;
+export default Header;

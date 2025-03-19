@@ -1,206 +1,194 @@
+/* General Container Styling */
 .container {
   text-align: center;
   padding: 2rem;
-  background-image: url("../../../assets/slider.jpg"); backdrop-filter: blur(10px);
-  background-size: cover;  /* Ensures the image covers the container without stretching */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling */
-  position: relative;
-  overflow: hidden;
-  width: 100%; 
-  height: 50vh; /* Adjust height based on your needs */
+  background-image: url("../../../assets/slider.jpg");
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50vh;
   margin: 0 auto;
-  border-radius: 10px; /* Optional: Adds rounded corners */
-  
-  /* Overlay effect */
-
-  /* Applies the blur effect to the image behind the container */
+  border-radius: 10px;
 }
 
+/* Header Styling */
+.header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
 
+.subtitle {
+  font-size: 0.9rem;
+  color: #f3a423;
+  letter-spacing: 2px;
+}
 
-  
-  /* Header styling */
-  .header {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .subtitle {
-    font-size: 0.9rem;
-    color: #f3a423;
-    letter-spacing: 2px;
-  }
-  
-  .highlight {
-    color: #f3a423;
-  }
-  
-  /* Slider wrapper with proper card alignment */
+.highlight {
+  color: #f3a423;
+}
+
+/* Slider Container */
+.slider {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Slider Button */
+.bo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(rgb(235, 176, 17), rgb(237, 134, 29));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bo i {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.bo i:hover {
+  color: #ff9800;
+}
+
+/* Slides */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Card Styling */
+.card {
+  min-width: calc(100% / 3 - 1rem);
+  padding: 1rem;
+  background: white;
+  border-radius: 60px 60px 60px 0;
+  margin: 0 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.readMore {
+  color: #f3a423;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Buttons */
+.navButton {
+  background-color: #f3a423;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.navButton:hover {
+  background-color: #e68a00;
+}
+
+.navButton.left {
+  left: 1rem;
+}
+
+.navButton.right {
+  right: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .slider {
-    width: 80%; /* Subtract 230px from both sides */
-    margin: 0 auto; /* Center the slider */
-    overflow: hidden;
-    position: relative;
-    height: 35vh;
-    display: flex;
-    justify-content: center;
-    margin-top: rem;
+    width: 95%;
   }
-  .bo{
-
-    width: 20%;
-    border-radius: 50%;
-    background: linear-gradient(rgb(235, 176, 17), rgb(237, 134, 29) 99.48%);
-    height: 8vh;
-  }
-  .bo i {
-    color: white;
-    margin-top: 20%;
-    font-size: 24px; /* Adjust icon size */
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .bo i:hover {
-    color: #ff9800; /* Changes color on hover */
-  }
-  
-  /* Slides wrapper for smooth transition */
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-  }
-  
-  /* Card styling for 3 items in one row */
   .card {
-    min-width: calc((100% - 6rem) / 3); /* 3 cards per row with proper spacing */
-    box-sizing: border-box;
-    padding: 1rem;
-    background: white;
-    border-radius: 60px 60px 60px 0;
-    margin: 0 1rem;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; /* To position the pseudo-element */
+    min-width: calc(100% / 2 - 1rem);
   }
-  
-  .card::before {
-    content: "";
-    position: absolute;
-    right: -10px;
-    top: -10px;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 10px solid var(--theme-color2);
-    transition: var(--transition);
-    opacity: 0.2;
-    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    padding: 1.5rem;
   }
-  
-  .card:hover::before {
-    opacity: 1; /* Make the border more visible when hovering */
+  .slider {
+    flex-direction: column;
+    height: auto;
   }
-  
-  /* Image styling */
-  .image {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    margin-right: 150px;
+  .card {
+    min-width: 100%;
+    margin: 10px 0;
   }
-  
-  .title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.5rem;
-  }
-  
-  .description {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-  
-  .readMore {
-    color: #f3a423;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .readMore:hover {
-    text-decoration: underline;
-  }
-  
-  /* Navigation buttons */
   .navButton {
-    background-color: #f3a423;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
     font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
   }
-  
-  .navButton:hover {
-    background-color: #e68a00;
+  .subtitle {
+    font-size: 0.8rem;
   }
-  
-  .navButton.left {
-    left: 1rem;
+  .bo {
+    width: 40px;
+    height: 40px;
   }
-  
-  .navButton.right {
-    right: 1rem;
+  .card img {
+    width: 80px;
+    height: 80px;
   }
-  
-  /* Media Queries for responsiveness */
-  @media (max-width: 768px) {
-    /* Adjust slider width */
-    .slider {
-      width: 100%;
-      padding: 0 20px; /* Add padding for better alignment */
-    }
-  
-    /* Adjust number of cards per row */
-    .card {
-      min-width: 45%; /* Show two cards per row */
-      margin: 10px 0; /* Reduced margin for smaller screens */
-    }
-  
-    .title {
-      font-size: 1rem; /* Smaller title font size */
-    }
-  
-    .description {
-      font-size: 0.8rem; /* Smaller description font size */
-    }
-  
-    .readMore {
-      font-size: 0.9rem; /* Smaller read more text */
-    }
-  
-    /* Adjust navigation buttons size */
-    .navButton {
-      width: 40px;
-      height: 40px;
-      font-size: 1.2rem; /* Smaller button size */
-    }
+  .title {
+    font-size: 1rem;
   }
-  
-  
+  .description {
+    font-size: 0.8rem;
+  }
+}

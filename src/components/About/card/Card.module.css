@@ -1,47 +1,108 @@
 .container {
-    text-align: center;
-  
-    color: white;
-    border: solid;
-    height: 50vh;
-    padding: 50px 20px;
-    width: 100%;
-    background-image:  url("../../../assets/aboutcrad4.webp");
+  text-align: center;
+  color: white;
+  border: solid;
+  height: auto;
+  min-height: 50vh;
+  padding: 50px 20px;
+  width: 100%;
+  background-image: url("../../../assets/aboutcrad4.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Heading */
+.heading {  
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Cards Container */
+.cardsContainer { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Card */
+.card {
+  background: white;
+  color: #1e1e50;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  box-shadow: 0 4px 8px #1e1e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image */
+.image {
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Title */
+.title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+      padding: 40px 10px;
   }
-  
-  .heading {  
-    font-size: 2rem;
-    margin-bottom: 20px;
+
+  .cardsContainer {
+      flex-direction: row;
+      flex-wrap: wrap;
   }
-  
-  .cardsContainer { 
-    /* border-bottom: 10px solid #1e1e50; */
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-  }
-  
+
   .card {
-    height: 50vh;
-  
-    background: white;
-    color: #1e1e50;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 400px;
-    box-shadow: 0 4px 8px  #1e1e50;
+      max-width: 300px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .heading {
+      font-size: 1.8rem;
+  }
+
+  .cardsContainer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 90%;
+      max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+      font-size: 1.5rem;
+  }
+
+  .container {
+      padding: 30px 10px;
+  }
+
+  .card {
+      width: 100%;
+      max-width: 350px;
+  }
+
   .image {
-    width: 70%;
-    height: auto;
-    border-radius: 5px;
+      width: 90%;
   }
-  
-  .title {
-    margin-top: 10px;
-    font-size: 1.2rem;
-  }
-  
+}

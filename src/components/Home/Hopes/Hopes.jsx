@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-  // import HopesImage from "../../../assets/Hopes2.png";
+
 import styles from "./Hopes.module.css";
 import imageSrc from "../../../assets/Hopes1.png"; // Replace with actual image path
 import CountUp from "react-countup"; // Import CountUp for animations
@@ -20,16 +20,15 @@ const Hopes = () => {
     <section className={styles.hero}>
         <div className={styles.h}>
       <div className={styles.imageContainer}>
-      <div className={`${styles.slice} `} style={{ backgroundImage: `url(${imageSrc})` }}></div>
+      {/* <div className={`${styles.slice} `} style={{ backgroundImage: `url(${imageSrc})` }}> */}
+        <div >
+          <img src={imageSrc} alt=""/>
+        {/* </div> */}
+      </div>
     
-{/* 
-<div className={styles.Hopesimag}>
-  <img src={HopesImage} alt="Hope Image" />
-</div>; */}
 
-        {/* <div className={`${styles.slice} ${styles.slice1}`} style={{ backgroundImage: `url(${imageSrc})` }}></div>
-        <div className={`${styles.slice} ${styles.slice2}`} style={{ backgroundImage: `url(${imageSrc})` }}></div>
-        <div className={`${styles.slice} ${styles.slice3}`} style={{ backgroundImage: `url(${imageSrc})` }}></div> */}
+
+       
       </div>
 
       <div className={styles.textContainer}>

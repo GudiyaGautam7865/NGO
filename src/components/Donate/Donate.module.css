@@ -1,4 +1,4 @@
-.container {
+/* .container {
     max-width: 800px;
     margin: auto;
     padding: 20px;
@@ -140,4 +140,153 @@
     border-radius: 5px;
     margin-top: 10px;
   }
+   */
   
+
+.donate {
+
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  margin: 60px;
+  color: var(--text-color);
+}
+
+.donate p {
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.donate h3 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.denomination {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 13px 0;
+  cursor: pointer;
+  background-color: var(--secondary-bg);
+  transition: background-color 0.2s ease;
+}
+
+.denomination label {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.denomination input {
+  left: -10001px;
+  position: absolute;
+}
+
+.denomination-other {
+  width: 100%;
+}
+
+.denomination-other input {
+  position: relative;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+  width: inherit;
+  text-align: center;
+  background-color: var(--secondary-bg);
+  border: none;
+  padding: 13px 0;
+  transition: background-color 0.2s ease;
+}
+
+.denomination-other input:hover {
+  background: var(--red);
+}
+
+.donate-amount .selected,
+.denomination-other input.selected,
+.donate-amount .denomination:hover {
+  background-color: var(--red);
+  border: 0;
+}
+
+.donate-black h2 {
+  font-family: "Oswald", sans-serif;
+  color: var(--text-color);
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.donate-black h2 span {
+  display: block;
+  float: left;
+  font-size: 16px;
+  padding-top: 7px;
+  margin-right: 20px;
+  text-align: center;
+  width: 30px;
+  height: 25px;
+  background-color: var(--red);
+  border-radius: 50%;
+}
+
+.donate-type label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.donate-blue {
+  background-color: #1e252d;
+  padding: 25px;
+}
+
+.donate-black {
+  padding: 25px;
+  background-color: #1e252d;
+}
+
+.donate-submit button {
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  background-color: var(--red);
+  border: none;
+  color: var(--text-color);
+  font-size: 20px;
+  line-height: 20px;
+  padding: 14px 0;
+  margin: 30px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.donate-submit small {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+}
+
+::placeholder {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+*:focus {
+  outline: none;
+}
+
+.dtype {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 13px 0;
+  background-color: var(--secondary-bg);
+  transition: background-color 0.2s ease;
+}
+
+.dtype:hover,
+.dtype.selected {
+  background: var(--red);
+}

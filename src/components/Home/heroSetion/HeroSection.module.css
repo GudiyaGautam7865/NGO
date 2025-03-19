@@ -1,109 +1,119 @@
-/* .cantain img{
-    width: 100%;
-    height: 50vh;
-} */
+/* Main Container */
 .container {
-width: 100%;
-    position: relative;
-    width: fit-content;
-  }
-  .box{
-    width: 137.6%;
-    
-  }
-  .box img{
-    width: 100%;
-
-    height: 100vh;
-  }
-  .image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .textOverlay {
-    position: absolute;
-    top: 10%;
-    left: 46.5%;
-    width: 90%;
-    transform: translate(-50%, -50%);
-    /* background: rgba(0, 0, 0, 0.5); */
-    color: rgb(228, 233, 228);
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 5px;
-  }
-  .heading{
-    position: absolute;
-    top: 22%;
-    left:51%;
-    width: 100%;
-    
-    transform: translate(-50%, -50%);
-    /* background: rgba(0, 0, 0, 0.5); */
-    color:rgb(255, 255, 255);
-    padding: 10px 20px;
-    font-size: 60px;
-    font-weight: bold;
-    border-radius: 5px;
-  }
-  .description {
-    position: absolute;
-    width: 65%;
-    top: 53%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    
-    /* Glass Effect Background */
-    background: rgba(0, 0, 0, 0.4);
-     backdrop-filter: blur(10px); 
-    
-    color: #fdfcfc;
-    padding: 15px 25px;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 8px;
-    text-align: center;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Full-width Box */
+.box {
+  width: 100%;
+}
+
+.box img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ensures proper scaling */
+}
+
+/* Responsive Image */
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text Overlay */
+.textOverlay {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  color: rgb(228, 233, 228);
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Heading */
+.heading {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Description Box */
+.description {
+  position: absolute;
+  width: 55%;
+  max-width: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 15px 25px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Volunteer Box */
 .volunteerBox {
   position: absolute;
-  bottom: 1%;
-  margin-top: 19%;
-  margin-left: 46%;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   background: white;
-  padding: 10px;
+  padding: 15px;
   border-radius: 8px;
-  width: 25%;
-  height: 25vh;
+  width: 30%;
+  height: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Hides scrollbar */
+  text-align: center;
 }
 
 .volunteerBox strong {
   font-size: 20px;
   color: #333;
 }
-.volun{
+
+.volun {
   gap: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.volun img{
- border-radius: 50%;
+
+.volun img {
+  border-radius: 50%;
 }
+
+/* Scrolling Avatars */
 .avatars {
   display: flex;
   overflow: hidden;
-  white-space: nowrap;
   width: 100%;
-  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatars img {
-  margin-top: 15px;
-  width: 40%;
-  height: 10vh;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-right: 5px;
   animation: scrollAvatars 8s linear infinite;
@@ -118,13 +128,123 @@ width: 100%;
     transform: translateX(-100%);
   }
 }
-.buttonHero{
+
+/* Hero Button */
+.buttonHero {
   position: absolute;
   top: 77%;
-  left: 49.5%;
+  left: 50%;
   width: 50%;
   transform: translate(-50%, -50%);
-  /* background: rgba(0, 0, 0, 0.5); */
-  color: rgb(247, 249, 247);
+  text-align: center;
+}
 
+.buttonHero button {
+  background-color: #b30000;
+  color: white;
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buttonHero button:hover {
+  background-color: #8c0000;
+}
+
+/* Mobile & Tablet Responsive Design */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 50px;
+  }
+
+  .description {
+    width: 70%;
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+
+  .volunteerBox {
+    width: 40%;
+    padding: 12px;
+  }
+
+  .buttonHero {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .textOverlay {
+    font-size: 16px;
+    top: 8%;
+  }
+
+  .heading {
+    font-size: 36px;
+    width: 90%;
+    top: 20%;
+  }
+
+  .description {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  .volunteerBox {
+    width: 70%;
+    padding: 10px;
+  }
+
+  .avatars img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .buttonHero {
+    width: 80%;
+  }
+
+  .buttonHero button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 28px;
+    top: 18%;
+  }
+
+  .description {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .volunteerBox {
+    width: 85%;
+    padding: 8px;
+  }
+
+  .volunteerBox strong {
+    font-size: 16px;
+  }
+
+  .avatars img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .buttonHero {
+    width: 90%;
+  }
+
+  .buttonHero button {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
 }
