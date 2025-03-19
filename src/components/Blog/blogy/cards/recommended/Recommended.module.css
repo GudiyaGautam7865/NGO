@@ -1,0 +1,174 @@
+.Container
+{
+    padding: 0 40px;
+}
+.title {
+    padding: 0 20px;
+    font-size: 1.2rem;
+    color: #333; 
+}
+
+.container h3:hover
+{
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.recommendCard {
+    flex: 0 0 190px; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.recommendCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    margin-bottom: 10px;
+}
+
+.recommendCard h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+ 
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+  }
+  
+  .text input {
+    flex: 1;
+    padding: 20px 25px;
+    font-size: 24px;
+    border: 2px solid rgb(240, 240, 240);
+    border-right: none; 
+    border-radius: 40px 0 0 40px; /* Rounds only the left side */
+    background-color: rgb(240, 240, 240);
+    outline: none;
+    width: 100%; /* Full width to take available space */
+  }
+  
+  .text input::placeholder {
+    color: rgb(100, 100, 100);
+  }
+  
+  .button {
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    padding: 20px 25px;
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: 0 40px 40px 0; /* Rounds only the right side */
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 150px; /* Ensure button has a minimum width */
+  }
+  
+  .button:hover {
+    background-color: blue;
+  }
+
+  .h4 {
+    color: #333;
+    margin-bottom: 0; 
+    padding: 0 30px;
+    font-size: 50px;
+}
+
+.h4 strong {
+    color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        gap: 10px;
+    }
+
+    .recommendCard {
+        flex: 0 0 45%; /* Adjust card size for medium screens */
+    }
+
+    .input {
+        flex-direction: column; /* Stack vertically on medium screens */
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .h4 {
+        font-size: 1.8rem; /* Reduced font size for smaller screens */
+    }
+
+    .text input {
+        font-size: 20px;
+        padding: 18px 20px;
+        margin-bottom: 10px; /* Space between input and button */
+      }
+    
+      .button {
+        font-size: 20px;
+        padding: 18px 20px;
+        width: 100%; /* Make the button fill the width */
+      }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1rem;
+    }
+
+    .recommendCard {
+        flex: 0 0 100%; /* Larger cards for smaller screens */
+        padding: 10px;
+    }
+
+    .recommendCard h3 {
+        font-size: 1rem;
+    }
+
+    .input {
+        padding: 30px 15px;
+        flex-direction: column; /* Stack vertically on small screens */
+        gap: 20px;
+    }
+
+    .h4 {
+        font-size: 1.2rem; /* Adjusted for mobile */
+    }
+
+    .text input {
+        font-size: 18px;
+        padding: 16px 18px;
+        width: 100%; /* Full width */
+        min-width: 250px; /* Maintain minimum size */
+        border-radius: 40px; /* Full rounded for smaller screens */
+        border-right: 2px solid rgb(240, 240, 240); /* Re-enable right border for smaller screens */
+        margin-bottom: 10px; /* Space between input and button */
+      }
+    
+      .button {
+        font-size: 16px;
+        padding: 16px 18px;
+        width: 100%; /* Full width button */
+        min-width: 150px; /* Maintain button size */
+        border-radius: 40px; /* Full rounded for smaller screens */
+        border-left: 2px solid rgb(240, 240, 240); /* Re-enable left border for smaller screens */
+      }
+}

@@ -1,0 +1,147 @@
+.Container {
+  padding: 0 50px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.article {
+  font-size: 90px;
+  line-height: 1.2;
+  margin-top: 50px;
+  margin-bottom: 24px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: nowrap;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Limit the width of input box */
+}
+
+.text input {
+  flex: 1;
+  padding: 20px 25px;
+  font-size: 24px;
+  border: 2px solid rgb(240, 240, 240);
+  border-right: none; 
+  border-radius: 40px 0 0 40px; /* Rounds only the left side */
+  background-color: rgb(240, 240, 240);
+  outline: none;
+  width: 100%; /* Full width to take available space */
+}
+
+.text input::placeholder {
+  color: rgb(100, 100, 100);
+}
+
+.button {
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  padding: 20px 25px;
+  border: 2px solid rgb(240, 240, 240);
+  border-radius: 0 40px 40px 0; /* Rounds only the right side */
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 150px; /* Ensure button has a minimum width */
+}
+
+.button:hover {
+  background-color: blue;
+}
+
+.h4 {
+  font-size: 20px; 
+  padding: 16px 18px;
+  border-radius: 40px;
+  color: rgb(100, 100, 100);
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets and smaller devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .Container {
+    padding: 15px;
+  }
+
+  .article {
+    font-size: 60px;
+  }
+
+  .input {
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: stretch; /* Make the input and button fill the container */
+  }
+
+  .text input {
+    font-size: 20px;
+    padding: 18px 20px;
+    margin-bottom: 10px; /* Space between input and button */
+  }
+
+  .button {
+    font-size: 20px;
+    padding: 18px 20px;
+    width: 100%; /* Make the button fill the width */
+  }
+
+  .h4 {
+    font-size: 18px;
+    padding: 16px 18px;
+  }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .Container {
+    padding: 16px;
+  }
+
+  .article {
+    margin-top: auto;
+    font-size: 40px;
+  }
+
+  .input {
+    flex-wrap: wrap;
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: stretch; /* Make both elements fill the container width */
+  }
+
+  .text input {
+    font-size: 18px;
+    padding: 16px 18px;
+    width: 100%; /* Full width */
+    min-width: 250px; /* Maintain minimum size */
+    border-radius: 40px; /* Full rounded for smaller screens */
+    border-right: 2px solid rgb(240, 240, 240); /* Re-enable right border for smaller screens */
+    margin-bottom: 10px; /* Space between input and button */
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 16px 18px;
+    width: 100%; /* Full width button */
+    min-width: 150px; /* Maintain button size */
+    border-radius: 40px; /* Full rounded for smaller screens */
+    border-left: 2px solid rgb(240, 240, 240); /* Re-enable left border for smaller screens */
+  }
+
+  .h4 {
+    font-size: 16px; 
+    padding: 16px 18px;
+    width: 100%; 
+    margin-top: 10px; 
+  }
+}

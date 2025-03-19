@@ -1,0 +1,206 @@
+.container {
+  text-align: center;
+  padding: 2rem;
+  background-image: url("../../../assets/slider.jpg"); backdrop-filter: blur(10px);
+  background-size: cover;  /* Ensures the image covers the container without stretching */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  position: relative;
+  overflow: hidden;
+  width: 100%; 
+  height: 50vh; /* Adjust height based on your needs */
+  margin: 0 auto;
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  
+  /* Overlay effect */
+
+  /* Applies the blur effect to the image behind the container */
+}
+
+
+
+  
+  /* Header styling */
+  .header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    color: #f3a423;
+    letter-spacing: 2px;
+  }
+  
+  .highlight {
+    color: #f3a423;
+  }
+  
+  /* Slider wrapper with proper card alignment */
+  .slider {
+    width: 80%; /* Subtract 230px from both sides */
+    margin: 0 auto; /* Center the slider */
+    overflow: hidden;
+    position: relative;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    margin-top: rem;
+  }
+  .bo{
+
+    width: 20%;
+    border-radius: 50%;
+    background: linear-gradient(rgb(235, 176, 17), rgb(237, 134, 29) 99.48%);
+    height: 8vh;
+  }
+  .bo i {
+    color: white;
+    margin-top: 20%;
+    font-size: 24px; /* Adjust icon size */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .bo i:hover {
+    color: #ff9800; /* Changes color on hover */
+  }
+  
+  /* Slides wrapper for smooth transition */
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  /* Card styling for 3 items in one row */
+  .card {
+    min-width: calc((100% - 6rem) / 3); /* 3 cards per row with proper spacing */
+    box-sizing: border-box;
+    padding: 1rem;
+    background: white;
+    border-radius: 60px 60px 60px 0;
+    margin: 0 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* To position the pseudo-element */
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 10px solid var(--theme-color2);
+    transition: var(--transition);
+    opacity: 0.2;
+    overflow: hidden;
+  }
+  
+  .card:hover::before {
+    opacity: 1; /* Make the border more visible when hovering */
+  }
+  
+  /* Image styling */
+  .image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    margin-right: 150px;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .readMore {
+    color: #f3a423;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .readMore:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navigation buttons */
+  .navButton {
+    background-color: #f3a423;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .navButton:hover {
+    background-color: #e68a00;
+  }
+  
+  .navButton.left {
+    left: 1rem;
+  }
+  
+  .navButton.right {
+    right: 1rem;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    /* Adjust slider width */
+    .slider {
+      width: 100%;
+      padding: 0 20px; /* Add padding for better alignment */
+    }
+  
+    /* Adjust number of cards per row */
+    .card {
+      min-width: 45%; /* Show two cards per row */
+      margin: 10px 0; /* Reduced margin for smaller screens */
+    }
+  
+    .title {
+      font-size: 1rem; /* Smaller title font size */
+    }
+  
+    .description {
+      font-size: 0.8rem; /* Smaller description font size */
+    }
+  
+    .readMore {
+      font-size: 0.9rem; /* Smaller read more text */
+    }
+  
+    /* Adjust navigation buttons size */
+    .navButton {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem; /* Smaller button size */
+    }
+  }
+  
+  

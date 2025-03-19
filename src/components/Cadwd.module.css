@@ -1,0 +1,19 @@
+/* Cadwd.module.css */
+.stack {
+    /* You can add any specific styling for the Stack component here */
+    padding: 20px;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  

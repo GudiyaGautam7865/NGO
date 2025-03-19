@@ -1,0 +1,47 @@
+.container {
+    text-align: center;
+  
+    color: white;
+    border: solid;
+    height: 50vh;
+    padding: 50px 20px;
+    width: 100%;
+    background-image:  url("../../../assets/aboutcrad4.webp");
+  }
+  
+  .heading {  
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cardsContainer { 
+    /* border-bottom: 10px solid #1e1e50; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    height: 50vh;
+  
+    background: white;
+    color: #1e1e50;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 4px 8px  #1e1e50;
+  }
+  
+  .image {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .title {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  

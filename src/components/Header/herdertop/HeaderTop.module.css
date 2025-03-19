@@ -1,0 +1,34 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.HeaderTop {
+    position: sticky;
+    top: 0;
+    height: 5vh;
+    background: #2a2b6b;
+    color: white; /* Improves text visibility */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px; /* Adds spacing on sides */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+.icons i{
+    margin-left: 10px;
+}
+.phone{
+    display: flex;
+    margin-left: 3px;
+}
+.phone p{
+    display: flex;
+    margin-left: 5px;
+}
+.email{ display: flex;
+    margin-left: 10px; 
+    width: 50%;
+    height: 1vh;
+    font-size: large;
+}

@@ -1,0 +1,125 @@
+.moremain {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 180px;
+    gap: 30px;
+  }
+  
+  .imageContainer,
+  .contentContainer {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    align-items: stretch;
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .headerContainer,
+  .solutionsContainer,
+  .featuresListContainer,
+  .buttonContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .headerContainer h5 {
+    margin: 0;
+    color: #df2a16;
+  }
+  
+  .headerContainer h2 {
+    margin-top: 0;
+  }
+  
+  .solutionsContainer {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .solution {
+    padding-top: 20px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  
+  .solutionImageContainer {
+    flex: 1;
+  }
+  
+  .solutionImageContainer1 img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .solutionTextContainer {
+    text-align: center;
+  }
+  
+  .featuresListContainer0 {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    border: 1px solid black;
+  }
+  
+  .featuresListContainer11 {
+    flex: 1;
+  }
+  
+  .buttonContainer1 button {
+    margin-top: 15px;
+    color: white;
+    text-align: start;
+    cursor: pointer;
+    background-color: #df2a16;
+  }
+  
+  @media (min-width: 768px) {
+    .moremain {
+      flex-wrap: nowrap;
+    }
+  
+    .contentContainer {
+      text-align: left;
+    }
+  
+    .solutionsContainer {
+      flex-direction: row;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .headerContainer h2 {
+      font-size: 2.5rem;
+    }
+  
+    .headerContainer p {
+      font-size: 1.2rem;
+    }
+  
+    .solutionImageContainer img {
+      width: 120px;
+    }
+  
+    .buttonContainer1 button {
+      font-size: 1.2rem;
+    }
+  }
